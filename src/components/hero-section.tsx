@@ -14,7 +14,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden parallax-bg">
+    <section className="relative min-h-screen lg:min-h-[900px] xl:min-h-[1000px] flex items-center justify-center overflow-hidden parallax-bg">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0">
         <motion.div
