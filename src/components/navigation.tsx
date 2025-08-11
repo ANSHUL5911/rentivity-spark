@@ -72,7 +72,7 @@ export function Navigation() {
             className="flex items-center space-x-2"
           >
             <Home className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-3d bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="text-xl font-bold text-3d text-glow bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Rentivity Spark
             </span>
           </motion.div>

@@ -56,7 +56,7 @@ export function AboutSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-3d">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-3d text-glow">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               About Rentivity Spark
             </span>
