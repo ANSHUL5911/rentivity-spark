@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Menu, X, Home, User, Bell, FileText, Scale, Settings } from "lucide-react"
+import { Menu, X, User, Bell, FileText, Scale, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -27,14 +27,14 @@ export function Navigation() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 glass-nav"
+      className="fixed top-0 left-0 right-0 z-50 bg-transparent"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Left side - Drawer Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="glass-button hover-glow">
+              <Button variant="ghost" size="icon" className="glass-button hover-glow rounded-full">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Open navigation menu</span>
               </Button>
@@ -64,18 +64,8 @@ export function Navigation() {
             </SheetContent>
           </Sheet>
 
-          {/* Center - Logo */}
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex items-center space-x-2"
-          >
-            <Home className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-3d text-glow bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Rentivity Spark
-            </span>
-          </motion.div>
+            
+            
 
           {/* Right side - Theme Toggle */}
           <motion.div

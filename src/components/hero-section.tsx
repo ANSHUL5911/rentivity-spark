@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Search, MapPin } from "lucide-react"
+import { Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { motion } from "framer-motion"
@@ -14,9 +14,9 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative -mt-16 md:-mt-20 pt-24 md:pt-28 lg:pt-32 min-h-screen lg:min-h-[900px] xl:min-h-[1000px] flex items-center justify-center overflow-hidden parallax-bg">
+    <section className="relative -mt-16 md:-mt-20 pt-24 md:pt-28 lg:pt-32 min-h-screen lg:min-h-[900px] xl:min-h-[1000px] flex items-center justify-center overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 md:hidden">
         <motion.div
           animate={{
             scale: [1, 1.1, 1],
@@ -91,18 +91,15 @@ export function HeroSection() {
           transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          <form onSubmit={handleSearch} className="search-3d p-4 md:p-6">
+          <form onSubmit={handleSearch} className="p-0">
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <div className="flex-1 relative">
-                <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                
                 <Input
                   type="text"
-                  placeholder="Where do you want to live? (City, neighborhood, address)"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 h-12 text-base bg-background/50 border-glass-border backdrop-blur-sm 
-                           hover:bg-background/70 focus:bg-background/80 transition-all duration-300
-                           focus:ring-2 focus:ring-primary/50 focus:border-primary/50"
+                  className="pl-4 h-12 text-base bg-transparent border-none shadow-none backdrop-blur-0 focus:ring-0 focus:border-transparent focus:outline-none"
                 />
               </div>
               
@@ -110,13 +107,10 @@ export function HeroSection() {
                 
                 <Button
                   type="submit"
-                  size="lg"
-                   className="bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary-glow 
-                           text-white h-12 px-6 hover-lift hover-glow transform transition-all duration-300 
-                           shadow-lg hover:shadow-xl"
+                  size="icon"
+                  className="bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary-glow text-primary-foreground h-12 w-12 rounded-full hover-lift hover-glow transform transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  <Search className="h-5 w-5 mr-2" />
-                  Search
+                  <Search className="h-5 w-5" />
                 </Button>
               </div>
             </div>
