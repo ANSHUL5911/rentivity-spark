@@ -27,7 +27,7 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl float-animation"
+          className="absolute top-20 left-20 w-56 h-56 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl float-animation"
         />
         <motion.div
           animate={{
@@ -39,7 +39,7 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-full blur-3xl float-animation"
+          className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-full blur-3xl float-animation"
           style={{ animationDelay: "3s" }}
         />
         <motion.div
@@ -52,7 +52,7 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-3xl float-animation"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-3xl float-animation"
           style={{ animationDelay: "6s" }}
         />
       </div>
@@ -65,7 +65,7 @@ export function HeroSection() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="mb-8"
         >
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-3d text-glow">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-3d text-glow">
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Rentivity
             </span>
@@ -78,7 +78,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
             Navigate your perfect rental home with AI-powered search, legal protection, and transparent reviews
           </motion.p>
@@ -91,7 +91,7 @@ export function HeroSection() {
           transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          <form onSubmit={handleSearch} className="search-3d p-6 md:p-8">
+          <form onSubmit={handleSearch} className="search-3d p-4 md:p-6">
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
               <div className="flex-1 relative">
                 <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
@@ -100,7 +100,7 @@ export function HeroSection() {
                   placeholder="Where do you want to live? (City, neighborhood, address)"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 h-14 text-lg bg-background/50 border-glass-border backdrop-blur-sm 
+                  className="pl-12 h-12 text-base bg-background/50 border-glass-border backdrop-blur-sm 
                            hover:bg-background/70 focus:bg-background/80 transition-all duration-300
                            focus:ring-2 focus:ring-primary/50 focus:border-primary/50"
                 />
@@ -111,8 +111,8 @@ export function HeroSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary-glow 
-                           text-white h-14 px-8 hover-lift hover-glow transform transition-all duration-300 
+                   className="bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary-glow 
+                           text-white h-12 px-6 hover-lift hover-glow transform transition-all duration-300 
                            shadow-lg hover:shadow-xl"
                 >
                   <Search className="h-5 w-5 mr-2" />
@@ -155,12 +155,12 @@ export function HeroSection() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center"
+            className="w-5 h-8 border-2 border-muted-foreground/50 rounded-full flex justify-center"
           >
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1 h-3 bg-muted-foreground/50 rounded-full mt-2"
+              className="w-1 h-2 bg-muted-foreground/50 rounded-full mt-2"
             />
           </motion.div>
         </motion.div>
