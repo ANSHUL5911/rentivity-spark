@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Search, MapPin, Filter } from "lucide-react"
+import { Search, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { motion } from "framer-motion"
@@ -107,15 +107,6 @@ export function HeroSection() {
               </div>
               
               <div className="flex gap-3">
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="lg"
-                  className="glass-button border-glass-border hover-lift h-14 px-6"
-                >
-                  <Filter className="h-5 w-5 mr-2" />
-                  Filters
-                </Button>
                 
                 <Button
                   type="submit"
@@ -135,7 +126,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.6 }}
-              className="flex flex-wrap gap-3 mt-6 justify-center"
+              className="hidden"
             >
               {["Apartments", "Houses", "Condos", "Studios", "Shared"].map((filter, index) => (
                 <motion.button
