@@ -99,7 +99,7 @@ export function HeroSection() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-4 h-12 text-base bg-transparent border-none shadow-none backdrop-blur-0 focus:ring-0 focus:border-transparent focus:outline-none"
+                  className="pl-4 h-12 text-base bg-transparent border border-border/30 shadow-none backdrop-blur-0 focus:ring-0 focus:border-border/50 focus:outline-none rounded-xl"
                 />
               </div>
               
